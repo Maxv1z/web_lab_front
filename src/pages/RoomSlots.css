@@ -1,0 +1,76 @@
+.room-slots-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.room-info {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.slot-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slot-time {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.book-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.book-btn:hover {
+  background: #45a049;
+}
+
+.past-slot {
+  opacity: 0.6;
+  background-color: #f8f9fa;
+}
+
+.date-range {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.time-range {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.duration {
+  font-size: 0.9em;
+  color: #7f8c8d;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.book-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
