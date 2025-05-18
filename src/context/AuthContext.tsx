@@ -37,17 +37,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const logout = async () => {
     try {
-      const token = localStorage.getItem('access_token');
+      const token = localStorage.getItem('refresh_token');
       if (token) {
-        await API.post(
-          '/users/logout/',
-          {},
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        await API.delete('/users/logout/', { data: { refresh_token: token } });
       }
     } catch (e) {
       console.error('Logout error', e);
