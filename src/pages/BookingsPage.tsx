@@ -38,7 +38,7 @@ export default function Bookings() {
   const handleCancel = async (id: number) => {
     try {
       await cancelBooking(id, accessToken!);
-      setBookings(bookings.map((b) => (b.id === id ? { ...b, status: 'cancelled' } : b)));
+      setBookings(bookings.map((b) => (b.id === id ? { ...b, status: 'canceled' } : b)));
       alert('Booking cancelled');
     } catch (err) {
       alert('Failed to cancel booking');

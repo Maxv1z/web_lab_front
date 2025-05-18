@@ -44,7 +44,7 @@ export type Booking = {
   room?: Room; // Optional room details
   start_time: string;
   end_time: string;
-  status: 'confirmed' | 'pending' | 'cancelled';
+  status: 'confirmed' | 'pending' | 'canceled';
   created_at: string;
 };
 
